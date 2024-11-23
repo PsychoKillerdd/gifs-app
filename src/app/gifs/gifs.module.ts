@@ -8,11 +8,10 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 @NgModule({
   declarations: [
     HomeComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
   ],
   imports: [
     CommonModule,
-    SearchBoxComponent,
   ],
   exports:[
     HomeComponent
