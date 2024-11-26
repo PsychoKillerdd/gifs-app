@@ -18,12 +18,16 @@ export class GifteService {
   }
   this._tagsHistory.unshift(tag)
   this._tagsHistory = this._tagsHistory.splice(0,10);
+  console.log(this.tagsHistory)
 
  }
- constructor(private http:HttpClient){}
+ constructor(private http:HttpClient){};
+
+
   searchTag(tag:string):void{
     if (tag.length === 0) return;
     this.organizeHistory(tag);
+
 
     // const params = new HttpParams()
     // .set('api_key',this.apiKey)
