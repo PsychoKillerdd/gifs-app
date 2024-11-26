@@ -18,7 +18,6 @@ export class GifteService {
   }
   this._tagsHistory.unshift(tag)
   this._tagsHistory = this._tagsHistory.splice(0,10);
-  console.log(this.tagsHistory)
 
  }
  constructor(private http:HttpClient){};
@@ -38,11 +37,10 @@ export class GifteService {
   //     console.log(resp);
   //   } );
   // }
-  this.http.get('https//api.giphy.com/v1/gifs/search?api_key=0YA4rvG29afWaSWIeMLgs8R4kh0ggbRO=valorant&limit=10')
+  this.http.get( 'https://api.giphy.com/v1/gifs/search?api_key=0YA4rvG29afWaSWIeMLgs8R4kh0ggbRO&q=valorant&limit=10' )
   .subscribe(resp => {
     console.log(resp)
   })
-
 
   // private apiKey:string = '0YA4rvG29afWaSWIeMLgs8R4kh0ggbRO';
   // private serviceUrl:string = 'https://api.giphy.com/v1/gifs';
