@@ -26,6 +26,7 @@ export class GifteService {
   searchTag(tag:string):void{
     if (tag.length === 0) return;
     this.organizeHistory(tag);
+    console.log('Chupame los cocos')
 
 
     // const params = new HttpParams()
