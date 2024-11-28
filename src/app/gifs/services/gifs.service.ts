@@ -22,9 +22,10 @@ export class GifteService {
   }
   this._tagsHistory.unshift(tag)
   this._tagsHistory = this._tagsHistory.splice(0,10);
+  this.savelocalStorage()
 
  }
- constructor(private http:HttpClient){};
+ constructor(private http:HttpClient){this.loadlocalStrorage()};
 
 
   searchTag(tag:string):void{
@@ -46,4 +47,20 @@ export class GifteService {
 
 
   }
+  private savelocalStorage():void{
+   localStorage.setItem('history', JSON.stringify(this._tagsHistory))
+  }
+
+
+
+  private loadlocalStrorage():void{
+    if(!localStorage.getItem('history')  ){
+      return;
+    }
+    this._tagsHistory = JSON.parse(localStorage.getItem('history')!)
+    if(this.tagsHistory.length === 0) return;
+    this.searchTag(this._tagsHistory[0]);
+  }
+
+
 }
