@@ -13,6 +13,6 @@ export class HomeComponent {
 
   get gifs():Gif[] {
     return this.gifsService.giflist
+    console.log('a')
   }
-
 }
