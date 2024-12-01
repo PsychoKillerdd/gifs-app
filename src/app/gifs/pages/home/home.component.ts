@@ -9,10 +9,13 @@ import { Gif } from '../../interfaces/gifs.interfaces';
 })
 export class HomeComponent {
   constructor(private gifsService:GifteService){}
+get (){
+  // todo
+}
 
 
   get gifs():Gif[] {
     return this.gifsService.giflist
-    console.log('a')
+    console.log('a soy un wn flojo dios mio')
   }
 }
