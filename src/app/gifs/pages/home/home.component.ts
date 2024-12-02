@@ -10,7 +10,10 @@ import { Gif } from '../../interfaces/gifs.interfaces';
 export class HomeComponent {
   constructor(private gifsService:GifteService){}
 get (){
-  // todo
+  // todoaaaa
+  a
+  a
+  a
 }
 
 
