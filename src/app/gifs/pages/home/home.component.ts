@@ -11,9 +11,7 @@ export class HomeComponent {
   constructor(private gifsService:GifteService){}
 get (){
   // todoaaaa
-  a
-  a
-  a
+ 
 }
 
 
